@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{% include 'navbar.html' %}
+<div class="site-wrap" id="home-section">
+    <div class="owl-carousel-wrapper">
+
+        <div class="box-92819">
+            <h1 class="text-white mb-3">Blog</h1>
+            <p class="lead text-white">The Valisha blog is a woork in progress. Have an inspiring story? Reach out to us!</p>
+        </div>
+
+        <div class="ftco-cover-1 overlay" style="background-image: url({% static 'img/hero_2.jpg' %});"></div>
+
+    </div>
+    <div class="site-section">
+        <div class="container">
+            <div class="heading-20219 mb-5">
+                <h1 class="title text-cursive text-center">Coming Soon!</h1>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="site-section">
+        <div class="container">
+
+            <div class="d-md-flex cta-20101 align-self-center bg-light p-5">
+                <div class="">
+                    <h2 class="text-cursive">Helping the Homeless, Hungry, and Hurting People</h2>
+                </div>
+                <div class="ml-auto"><a href="#" class="btn btn-primary">Donate Now</a></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

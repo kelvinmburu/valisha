@@ -15,9 +15,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-md-left pl-0">
-                    <a href="#" class=" pr-3 pl-0">Home</a>
-                    <a href="#" class="p-3">Events</a>
-                    <a href="#" class="p-3">Become A Volunteer</a>
+                    <a href="#" class=" pr-3 pl-0">Become A Volunteer</a>
+                    <a href="#" class="p-3">Donate</a>
+                    <a href="#" class="p-3">Logout</a>
                 </div>
                 <div class="col-md-6 text-md-right">
                     <a href="#" class="p-3"><span class="icon-twitter"></span></a>
@@ -34,17 +34,17 @@
 
 
                 <div class="site-logo">
-                    <a href="index.html" class="text-white">Valisha</a>
+                    <a href="{% url 'home' %}" class="text-white">Valisha</a>
                 </div>
 
 
                 <nav class="site-navigation text-left ml-auto " role="navigation">
                     <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                        <li><a href="{% url 'home' %}" class="nav-link">Home</a></li>
-                        <li><a href="about.html" class="nav-link">About Us</a></li>
-                        <li><a href="causes.html" class="nav-link">Our Causes</a></li>
-                        <li class="active"><a href="blog.html" class="nav-link">Blog</a></li>
-                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li class="active"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+                        <li><a href="{% url 'about' %}" class="nav-link">About Us</a></li>
+                        <li><a href="{% url 'causes' %}" class="nav-link">Our Causes</a></li>
+                        <li><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+                        <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
                         <li><a href="contact.html" class="nav-link">Login</a></li>
                     </ul>
                 </nav>

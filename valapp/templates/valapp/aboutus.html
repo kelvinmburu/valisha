@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{% include 'navbar.html' %}
+
+<div class="site-wrap" id="home-section">
+
+    <div class="owl-carousel-wrapper">
+
+
+        <div class="box-92819">
+            <h1 class="text-white mb-3">About Us</h1>
+            <p class="lead text-white">Valisha is a Nonprofit platform users can use to make donations to the needy in
+                society within a one mile radius.</p>
+        </div>
+
+
+        <div class="ftco-cover-1 overlay" style="background-image: url({% static 'img/hero_1.jpg' %});"></div>
+
+    </div>
+
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static 'img/img_2.jpg' %}" alt="Image" class="img-fluid">
+                </div>
+                <div class="col-md-5 ml-auto">
+                    <h3 class="text-cursive mb-4">Our Mission</h3>
+                    <p>Valisha is a Nonprofit platform users can use to make donations to the needy in
+                        society within a one mile radius.</p>
+                    <p>Valisha is a Nonprofit platform users can use to make donations to the needy in
+                        society within a one mile radius.</p>
+                    <p>Valisha is a Nonprofit platform users can use to make donations to the needy in
+                        society within a one mile radius.</p>
+                    <p><a href="{% url 'contact' %}" class="btn btn-primary rounded-0 px-4">Contact Us</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row mb-5 justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="text-cursive">Our Team</h2>
+                </div>
+            </div>
+            <div class="row align-items-stretch">
+
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="post-entry-1 h-100 bg-white text-center">
+                        <a href="#" class="d-inline-block">
+                            <img src="{% static 'img/profile.jpeg' %}" alt="Image" class="img-fluid">
+                        </a>
+                        <div class="post-entry-1-contents">
+                            <span class="meta">Founder</span>
+                            <h2>Kelvin Mburu</h2>
+                            <p>Kelvin Mburu is a software developer and blogger passionate about building a better society</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="post-entry-1 h-100 bg-white text-center">
+                        <a href="#" class="d-inline-block">
+                            <img src="{% static 'img/pers2.jpg' %}" alt="Image" class="img-fluid">
+                        </a>
+                        <div class="post-entry-1-contents">
+                            <span class="meta">Volunteer</span>
+                            <h2>Jane Doe</h2>
+                            <p>Jane is a community development expert and a passionate lover of animals.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="post-entry-1 h-100 bg-white text-center">
+                        <a href="#" class="d-inline-block">
+                            <img src="{% static 'img/pers5.jpg' %}" alt="Image" class="img-fluid">
+                        </a>
+                        <div class="post-entry-1-contents">
+                            <span class="meta">Volunteer</span>
+                            <h2>John Doe</h2>
+                            <p>John is passionate about making a difference in the community.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="site-section">
+        <div class="container">
+
+            <div class="d-md-flex cta-20101 align-self-center bg-light p-5">
+                <div class="">
+                    <h2 class="text-cursive">Helping the Homeless, Hungry, and Hurting People</h2>
+                </div>
+                <div class="ml-auto"><a href="#" class="btn btn-primary">Donate Now</a></div>
+            </div>
+
+        </div>
+    </div>
+
+    {% endblock %}
