@@ -2,8 +2,5 @@ from django.shortcuts import render
 
 # Create your views here.
 def home(request):
-    text = 'Hello django'
-    context = {
-        'text': text,
-    }
+    context = {}
     return render(request, 'valapp/index.html', context)
