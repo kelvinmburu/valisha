@@ -79,6 +79,7 @@ Alternatively, you can contact me via [LinkedIn](https://www.linkedin.com/in/kel
 This project's UI wouldn't have been a success without resources from the following sources:
 * Favicon image from [Icons8](https://icons8.com/)
 * UI Template from [Colorlib](https://colorlib.com/)
+* Stock images from [Pexels](https://www.pexels.com/)
 ## License
 
 Please view the project [LICENSE](LICENSE) for more information.
