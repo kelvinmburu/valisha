@@ -14,9 +14,7 @@
                                 <h2 class="footer-heading mb-4">Features</h2>
                                 <ul class="list-unstyled">
                                     <li><a href="{% url 'about' %}">About Us</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                    <li><a href="#">Terms of Service</a></li>
-                                    <li><a href="#">Privacy</a></li>
+                                    <li><a href="{% url 'causes' %}">Our Cause</a></li>
                                     <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                 </ul>
                             </div>
@@ -28,11 +26,12 @@
                         <div class="mb-5">
                             <h2 class="footer-heading mb-4">Subscribe to Newsletter</h2>
                             <form action="#" method="post" class="footer-suscribe-form">
+                                {% csrf_token %}
                                 <div class="input-group mb-3">
                                     <input type="text"
                                         class="form-control rounded-0 border-secondary text-white bg-transparent"
                                         placeholder="Enter Email" aria-label="Enter Email"
-                                        aria-describedby="button-addon2">
+                                        aria-describedby="button-addon2" required>
                                     <div class="input-group-append">
                                         <button class="btn btn-primary text-white" type="button"
                                             id="button-addon2">Subscribe</button>
@@ -43,7 +42,7 @@
 
 
                         <h2 class="footer-heading mb-4">Follow Us</h2>
-                        <a href="#about-section" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>
+                        <a href="{% url 'about' %}" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>
                         <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
                         <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                         <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
