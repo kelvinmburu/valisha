@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{% include 'navbar.html' %}
+<!-- Login -->
+{%if page == 'login' %}
+<div class="site-wrap" id="home-section">
+
+    <div class="site-section">
+        <div class="container">
+            <div class="heading-20219 mb-5">
+                <h1 class="title text-cursive text-center">Login</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-section bg-image overlay-primary" style="background-image: url('images/img_1.jpg');">
+        <div class="container">
+            <div class="row align-items-stretch">
+                <div class="col-md-6">
+                    <img src="{% static 'img/img_1.jpg' %}" alt="Image" class="img-fluid shadow">
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-white h-100 p-4 shadow">
+                        <form id="contact" action="" method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input type="text" name="username" class="form-control" placeholder="Username"
+                                    autocomplete="on" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control" placeholder="Password"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" id="form-submit" value="Login" class="btn btn-primary">
+                            </div>
+                        </form>
+                        <div class="">
+                            <p>Dont have an account? <a class="signup-link" href="{% url 'register' %}">Signup</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="site-wrap" id="home-section">
+
+    <div class="site-section">
+        <div class="container">
+            <div class="heading-20219 mb-5">
+                <h1 class="title text-cursive text-center">Register</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-section bg-image overlay-primary" style="background-image: url('images/img_1.jpg');">
+        <div class="container">
+            <div class="row align-items-stretch">
+                <div class="col-md-6">
+                    <img src="{% static 'img/img_1.jpg' %}" alt="Image" class="img-fluid shadow">
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-white h-100 p-4 shadow">
+                        <form id="contact" action="" method="post">
+                            {% csrf_token %}
+                            {{form}}
+                            <div class="form-group">
+                                <input type="submit" id="form-submit" value="Submit" class="btn btn-primary">
+                            </div>
+                        </form>
+                        <div class="">
+                            <p>Already have an account? <a class="signup-link" href="{% url 'login' %}">SignIn</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}

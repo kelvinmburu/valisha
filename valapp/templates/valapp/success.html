@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{%if page == 'register' %}
+<div class="site-wrap" id="home-section">
+    <div class="site-section">
+        <div class="container">
+            <div class="row mb-5 align-items-st">
+                <div class="col-md-5">
+                    <div class="heading-20219">
+                        <h2 class="title text-cursive mb-4">Congratulations!</h2>
+                        <p>Your account signup is successful. You're now part of the Valisha community.
+                            Glad to have you on board!</p>
+                        <p>Please check your email for a welcome message from Valisha</p>
+                        <p><a href="{%url 'login' %}" class="btn btn-primary rounded-0 px-4">Login</a></p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="cause shadow-sm">
+
+                        <a href="#" class="cause-link d-block">
+                            <img src="{% static 'img/success.jpg' %}" alt="Image" class="img-fluid">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="site-wrap" id="home-section">
+    <div class="site-section">
+        <div class="container">
+            <div class="row mb-5 align-items-st">
+                <div class="col-md-5">
+                    <div class="heading-20219">
+                        <h2 class="title text-cursive mb-4">Success</h2>
+                        <p>We have received your email and we will get in touch shortly.</p>
+                        <p><a href="{%url 'home' %}" class="btn btn-primary rounded-0 px-4">Home</a></p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="cause shadow-sm">
+
+                        <a href="#" class="cause-link d-block">
+                            <img src="{% static 'img/success.jpg' %}" alt="Image" class="img-fluid">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
