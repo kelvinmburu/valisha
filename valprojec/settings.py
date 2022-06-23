@@ -147,6 +147,11 @@ EMAIL_PORT = config('EMAIL_PORT')
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
+# MAILCHIMP CREDENTIALS
+MAILCHIMP_API_KEY = 'bed8dd2b549d66b938255db26dcb8a7d-us12'
+MAILCHIMP_DATA_CENTER = 's12'
+MAILCHIMP_EMAIL_LIST_ID = '0c149111bf'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
