@@ -7,6 +7,7 @@ from .forms import RegisterForm
 from .emails import send_welcome_email
 from valapp.models import Profile, Cloth, Center
 from .forms import UpdateProfileForm
+from django.contrib.auth.decorators import login_required
 
 from django.conf import settings
 from mailchimp_marketing import Client
@@ -97,11 +98,13 @@ def contact(request):
     return render(request, 'valapp/contact.html', context)
 
 # Profile section
+@login_required(login_url='login')
 def user_profile(request):
     profile = Profile.objects.get(owner=request.user)
     ctx = {'profile': profile,}
     return render(request, 'valapp/profile.html', ctx)
 
+@login_required(login_url='login')
 def update_profile(request):
     profile = Profile.objects.get(owner=request.user)
     form = UpdateProfileForm(instance=profile)
