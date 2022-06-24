@@ -25,7 +25,7 @@ class Center(models.Model):
         return cls.objects.filter(id=hood_id)
 
 class Profile(models.Model):
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True, related_name='profile')
     bio = models.CharField(max_length=300, blank=True, null=True)
     pic = models.ImageField(upload_to='images/', default='default.jpg', blank = True)
     center = models.ForeignKey(Center, on_delete=models.SET_NULL, null=True, blank=True)
