@@ -14,5 +14,9 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('causes/', views.causes, name='causes'),
     path('blog/', views.blog, name='blog'),
-    path('contact', views.contact, name='contact')
+    
+    path('paypal', views.paypal, name='paypal'),
+    
+    path('hood/<str:name>', views.donations, name='hood'),
+    path('add_business/', views.add_donation, name='business'),
 ]

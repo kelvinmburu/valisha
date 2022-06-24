@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import RegisterForm
 from .emails import send_welcome_email
-from valapp.models import Profile
+from valapp.models import Profile, Cloth, Center
 from .forms import UpdateProfileForm
 
 from django.conf import settings
@@ -148,3 +148,28 @@ def subscription(request):
         messages.success(request, "Email received. thank You! ") # message
 
     return render(request, 'valapp/index.html')
+
+def add_donation(request):
+    page = 'business'
+    if request.method == 'POST':
+        owner = Profile.objects.get(owner=request.user) 
+        business_name = request.POST.get('name')
+        location = request.POST.get('location')
+        contact = request.POST.get('contact')
+        new_business = Cloth.objects.create(owner=owner, name=business_name, location=location, contact=contact, hood=hood)
+        new_business.save()
+        return redirect('hood')
+    ctx = {'page':page}
+    return render(request, 'valapp/donate.html', ctx)
+
+def donations(request, name):
+    hood = Center.objects.get(name=name)
+    business = Center.objects.filter(hood=hood)
+    current_user = Profile.objects.get(owner=request.user)
+
+    ctx = {'hood': hood, 'current_user': current_user, 'business': business}
+    return render(request, 'valapp/single-hood.html', ctx)
+
+def paypal(request):
+    ctx = {}
+    return render(request, 'valapp/paypal.html', ctx)
