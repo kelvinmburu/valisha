@@ -43,9 +43,9 @@ To access the admin dashboard, follow the instructions below:
 
 1. Proceed to this [link](https://github.com/kelvinmburu/valisha.git) and clone the repository.
 2. Extract the folder and `cd` to the folder on your terminal or your prefered IDE
-3. In the terminal, create a virtual environment: `python3 -m venv virtual` and activate it through `source virtual/bin/activate`. In the case of any name, please use `source <name>/bin/activate` or refer to this [documentation](https://stackoverflow.com/questions/31252791/flask-importerror-no-module-named-flask) for Flask virtual environment installation.
+3. In the terminal, create a virtual environment: `python3 -m venv virtual` and activate it through `source virtual/bin/activate`. In the case of any name, please use `source <name>/bin/activate` or refer to this [documentation](https://stackoverflow.com/questions/31252791/flask-importerror-no-module-named-flask) for the virtual environment installation.
 4. Install all dependencies from the `requirements.txt` file; use `pip install -r requirements.txt` to install needed dependencies.
-6. In the terminal, and within the project folder, run `python manage.py runserver` to start the project.
+6. In the terminal, and within the project folder, activate the virtual environment and run `python manage.py runserver` to start the project.
 7. View the application on your browser on `http://127.0.0.1:8000`. If you have another project running on another port, use `venv run --host 0.0.0.0 --port 8001` to switch to a new port; You can use a different port number.
 
 ## Behavior Driven Development (BDD)
