@@ -22,7 +22,7 @@ This is a Nonprofit Django web application users can use to make donations to th
 2. [Django version 4](https://docs.djangoproject.com/en/4.0/)
 3. HTML, CSS and JavaScript
 4. Bootstrap CSS Framework
-5. PayPal API
+5. [PayPal API](https://developer.paypal.com/api/rest/)
 
 ## Project Requirements & Prerequisites
 
