@@ -3,13 +3,6 @@ This is a Nonprofit Django web application users can use to make donations to th
 
 ![Site Screenshot](static/img/valisha.png)
 
-# Django Admin Login
-To access the admin dashboard, follow the instructions below:
-
-* Navigate to ``
-* Username: ``
-* Password: ``
-
 ## Project Run-Through
 * A few details about this project:
 
@@ -23,13 +16,14 @@ To access the admin dashboard, follow the instructions below:
 ## Contribution
 - [Kelvin Mburu](https://github.com/kelvinmburu) 📖
 
-## Technology Used
+## Tools & Technology Used
 
 1. Python 3.8
 2. [Django version 4](https://docs.djangoproject.com/en/4.0/)
 3. HTML, CSS and JavaScript
 4. Bootstrap CSS Framework
-5. 
+5. PayPal API
+
 ## Project Requirements & Prerequisites
 
 1. IDE of Choice
