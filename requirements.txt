@@ -1,5 +1,5 @@
 anyio==3.6.2
-apturl==0.5.2
+# apturl==0.5.2
 asgiref==3.6.0
 bcrypt==4.0.1
 blinker==1.5
