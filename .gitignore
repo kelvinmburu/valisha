@@ -2,3 +2,6 @@ env/
 .*pyc
 __pycache__
 .env
+
+sample.txt
+db.sqlite3
