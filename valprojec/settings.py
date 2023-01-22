@@ -98,7 +98,7 @@ if config('MODE')=="dev":
 else:
    DATABASES = {
        'default': dj_database_url.config(
-           default=config('DATABASE_URL', conn_max_age=1800)
+           default=config('DATABASE_URL')
        )
    }
 
