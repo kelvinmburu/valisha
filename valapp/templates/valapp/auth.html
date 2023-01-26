@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% load socialaccount %}
+
 {% block body %}
 {% include 'navbar.html' %}
 <!-- Login -->
@@ -38,7 +40,22 @@
                             </div>
                         </form>
                         <div class="">
-                            <p>Dont have an account? <a class="signup-link text-success" href="{% url 'register' %}">Signup</a></p>
+                            <p>Dont have an account? <a class="signup-link text-success"
+                                    href="{% url 'register' %}">Signup</a></p>
+                        </div>
+                        <div class="class">
+                            <p style="color: green;">OR</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="btn btn-outline-success" href="{% provider_login_url 'google'%}?next=/"
+                                    role="button" style="text-transform:none">
+                                    <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                                    Login with Google
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -73,7 +90,22 @@
                             </div>
                         </form>
                         <div class="">
-                            <p>Already have an account? <a class="signup-link text-success" href="{% url 'login' %}">SignIn</a></p>
+                            <p>Already have an account? <a class="signup-link text-success"
+                                    href="{% url 'login' %}">SignIn</a></p>
+                        </div>
+                        <div class="class">
+                            <p style="color: green;">OR</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a class="btn btn-outline-success" href="{% provider_login_url 'google'%}?next=/"
+                                    role="button" style="text-transform:none">
+                                    <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                                    Login with Google
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
